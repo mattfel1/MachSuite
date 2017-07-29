@@ -1,0 +1,70 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:44:56 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop'
+INFO: [HLS 200-10] Creating and opening project '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn'.
+INFO: [HLS 200-10] Adding design file 'backprop.c' to the project
+WARNING: [HLS 200-40] Cannot find design file 'support.h'
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Adding design file 'local_support.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Creating and opening solution '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+   Compiling(apcc) ../../../../local_support.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:44:57 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1207501497635097401392
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../../../common/support.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:44:58 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1208041497635098635106
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../../../common/harness.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:45:00 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1208581497635100082834
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../backprop.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:45:01 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1209121497635101159527
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite_fresh/backprop/backprop/backprop_syn/solution/csim/build'
+@E Simulation failed: SIGSEGV.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source hls.tcl"
+    invoked from within
+"hls::main hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

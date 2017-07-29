@@ -1,0 +1,4 @@
+lappend pragmaStatus0 {pragma "PIPELINE" source "/local/ssd/home/mattfel/machsuite/gemm/ncubed/gemm.c" location "gemm/inner" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "PIPELINE" source "/local/ssd/home/mattfel/machsuite/gemm/ncubed/gemm.c" location "gemm/middle" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "PIPELINE" source "/local/ssd/home/mattfel/machsuite/gemm/ncubed/gemm.c" location "gemm/outter" found 0 funcFound 1 applied 0 ambiguous 0 reason "Directive 'PIPELINE' cannot be applied: Label 'outter' does not exist in function 'gemm'. "}
+lappend pragmaStatus3 {pragma "RESOURCE" source "/local/ssd/home/mattfel/machsuite/gemm/ncubed/gemm.c" location "gemm" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "mult"}

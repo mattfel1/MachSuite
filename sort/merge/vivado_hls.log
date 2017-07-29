@@ -1,0 +1,343 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:43:49 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/sort/merge'
+INFO: [HLS 200-10] Creating and opening project '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn'.
+INFO: [HLS 200-10] Adding design file 'sort.c' to the project
+INFO: [HLS 200-10] Adding design file 'support.h' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'sort.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 862849 ; free virtual = 998103
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 862848 ; free virtual = 998102
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 862848 ; free virtual = 998103
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 862848 ; free virtual = 998103
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'merge' (sort.c:3).
+WARNING: [XFORM 203-503] Cannot unroll loop 'merge_label1' (sort.c:7) in function 'merge' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'merge_label2' (sort.c:11) in function 'merge' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'merge_label3' (sort.c:18) in function 'merge' completely: variable loop bound.
+INFO: [XFORM 203-11] Balancing expressions in function 'merge' (sort.c:3)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 862827 ; free virtual = 998083
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'mergesort_label1' (sort.c:38:54) in function 'ms_mergesort' : 
+WARNING: [XFORM 203-542] the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 862828 ; free virtual = 998083
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ms_mergesort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'merge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.74 seconds; current allocated memory: 68.606 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 68.925 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'ms_mergesort' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'merge' is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 69.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 69.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 69.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ms_mergesort' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ms_mergesort/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ms_mergesort' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ms_mergesort'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 70.803 MB.
+INFO: [RTMG 210-278] Implementing memory 'merge_temp_ram' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 862819 ; free virtual = 998076
+INFO: [SYSC 207-301] Generating SystemC RTL for ms_mergesort.
+INFO: [VHDL 208-304] Generating VHDL RTL for ms_mergesort.
+INFO: [VLOG 209-307] Generating Verilog RTL for ms_mergesort.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_ms_mergesort.cpp
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:43:58 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/harness.c:6:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1174591497840238252266
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) local_support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:43:59 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1175131497840239281020
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sort.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:44:00 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1175651497840240297482
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:44:01 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1176171497840241363250
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Success.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_ms_mergesort_top -prj ms_mergesort.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s ms_mergesort -debug wave 
+Multi-threading is on. Using 142 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/merge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module merge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/AESL_automem_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/ms_mergesort.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_ms_mergesort_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/ms_mergesort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ms_mergesort
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/merge_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module merge_temp_ram
+INFO: [VRFC 10-311] analyzing module merge_temp
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.merge_temp_ram
+Compiling module xil_defaultlib.merge_temp(DataWidth=32,AddressR...
+Compiling module xil_defaultlib.merge
+Compiling module xil_defaultlib.ms_mergesort
+Compiling module xil_defaultlib.AESL_automem_a
+Compiling module xil_defaultlib.apatb_ms_mergesort_top
+Built simulation snapshot ms_mergesort
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/xsim.dir/ms_mergesort/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/xsim.dir/ms_mergesort/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Jun 18 19:44:04 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 18 19:44:04 2017...
+
+****** xsim v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ms_mergesort/xsim_script.tcl
+# xsim {ms_mergesort} -autoloadwcfg -tclbatch {ms_mergesort.tcl}
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source ms_mergesort.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set a_group [add_wave_group a(memory) -into $cinoutgroup]
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/a_q0 -into $a_group -radix hex
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/a_d0 -into $a_group -radix hex
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/a_we0 -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/a_ce0 -into $a_group -color #ffff00 -radix hex
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/a_address0 -into $a_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_start -into $blocksiggroup
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_done -into $blocksiggroup
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_idle -into $blocksiggroup
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_ms_mergesort_top/AESL_inst_ms_mergesort/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_ms_mergesort_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ms_mergesort_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ms_mergesort_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_ms_mergesort_top/LENGTH_a -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_a_group [add_wave_group a(memory) -into $tbcinoutgroup]
+## add_wave /apatb_ms_mergesort_top/a_q0 -into $tb_a_group -radix hex
+## add_wave /apatb_ms_mergesort_top/a_d0 -into $tb_a_group -radix hex
+## add_wave /apatb_ms_mergesort_top/a_we0 -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_ms_mergesort_top/a_ce0 -into $tb_a_group -color #ffff00 -radix hex
+## add_wave /apatb_ms_mergesort_top/a_address0 -into $tb_a_group -radix hex
+## save_wave_config ms_mergesort.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "1003845000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1003885 ns : File "/local/ssd/home/mattfel/machsuite/sort/merge/sort_syn/solution/sim/verilog/ms_mergesort.autotb.v" Line 218
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jun 18 19:44:13 2017...
+INFO: [COSIM 212-316] Starting C post checking ...
+Success.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total elapsed time: 23.71 seconds; peak allocated memory: 70.803 MB.

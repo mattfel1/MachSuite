@@ -1,0 +1,61 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 16:43:42 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/gemm/ncubed/gemm_hls/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/677011497915822589942
+INFO: [APCC 202-1] APCC is done.

@@ -1,0 +1,290 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 21:12:06 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/kmp/kmp'
+INFO: [HLS 200-10] Opening project '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn'.
+INFO: [HLS 200-10] Adding design file 'kmp.c' to the project
+INFO: [HLS 200-10] Adding design file 'support.h' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'kmp.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 861383 ; free virtual = 997893
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 861363 ; free virtual = 997872
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 861353 ; free virtual = 997863
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 861351 ; free virtual = 997862
+INFO: [XFORM 203-602] Inlining function 'CPF' into 'kmp' (kmp.c:28) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 861325 ; free virtual = 997835
+WARNING: [XFORM 203-562] Loop 'c2' (kmp.c:13) in function 'kmp' has unknown bound because it has multiple exiting blocks.
+WARNING: [XFORM 203-562] Loop 'k2' (kmp.c:32) in function 'kmp' has unknown bound because it has multiple exiting blocks.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 861331 ; free virtual = 997841
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kmp' ...
+WARNING: [SYN 201-107] Renaming port name 'kmp/input' to 'kmp/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'kmp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.36 seconds; current allocated memory: 58.832 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 59.177 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kmp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kmp/pattern' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kmp/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kmp/kmpNext' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kmp/n_matches' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kmp' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kmp'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 59.683 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 469.965 ; gain = 140.590 ; free physical = 861313 ; free virtual = 997824
+INFO: [SYSC 207-301] Generating SystemC RTL for kmp.
+INFO: [VHDL 208-304] Generating VHDL RTL for kmp.
+INFO: [VLOG 209-307] Generating Verilog RTL for kmp.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_kmp.cpp
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 21:12:13 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/harness.c:6:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/171121497931933743532
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) kmp.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 21:12:14 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/173981497931934808160
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) local_support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 21:12:15 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/174501497931935833262
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Mon Jun 19 21:12:16 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/175031497931936793800
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Success.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_kmp_top -prj kmp.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s kmp 
+Multi-threading is on. Using 142 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/AESL_automem_kmpNext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_kmpNext
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/kmp.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_kmp_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/AESL_automem_pattern.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_pattern
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/kmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module kmp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/AESL_automem_n_matches.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_n_matches
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.kmp
+Compiling module xil_defaultlib.AESL_automem_pattern
+Compiling module xil_defaultlib.AESL_automem_input_r
+Compiling module xil_defaultlib.AESL_automem_kmpNext
+Compiling module xil_defaultlib.AESL_automem_n_matches
+Compiling module xil_defaultlib.apatb_kmp_top
+Built simulation snapshot kmp
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/xsim.dir/kmp/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/xsim.dir/kmp/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Jun 19 21:12:19 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 19 21:12:19 2017...
+
+****** xsim v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/kmp/xsim_script.tcl
+# xsim {kmp} -autoloadwcfg -tclbatch {kmp.tcl}
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source kmp.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "1958115000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1958155 ns : File "/local/ssd/home/mattfel/machsuite/kmp/kmp/kmp_syn/solution/sim/verilog/kmp.autotb.v" Line 419
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Jun 19 21:12:28 2017...
+INFO: [COSIM 212-316] Starting C post checking ...
+Success.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total elapsed time: 22.72 seconds; peak allocated memory: 59.683 MB.

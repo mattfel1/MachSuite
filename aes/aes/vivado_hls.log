@@ -1,0 +1,358 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:39:43 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/aes/aes'
+INFO: [HLS 200-10] Opening project '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn'.
+INFO: [HLS 200-10] Adding design file 'aes.c' to the project
+WARNING: [HLS 200-40] Cannot find design file 'support.h'
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Cannot find source file support.h; skipping it.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+WARNING: [HLS 200-40] Directive 'RESOURCE' for core 'RAM_1P_BRAM' cannot be applied: Function 'add_addRoundKey' does not exist in any synthesis source file.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 870785 ; free virtual = 998426
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 870783 ; free virtual = 998424
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 870782 ; free virtual = 998422
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'aes_addRoundKey_cpy' into 'aes256_encrypt_ecb' (aes.c:190) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_subBytes' into 'aes256_encrypt_ecb' (aes.c:193) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_shiftRows' into 'aes256_encrypt_ecb' (aes.c:194) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_mixColumns' into 'aes256_encrypt_ecb' (aes.c:195) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 870781 ; free virtual = 998421
+INFO: [XFORM 203-602] Inlining function 'rj_xtime' into 'aes_mixColumns' (aes.c:147) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_addRoundKey_cpy' into 'aes256_encrypt_ecb' (aes.c:190) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_subBytes' into 'aes256_encrypt_ecb' (aes.c:193) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_shiftRows' into 'aes256_encrypt_ecb' (aes.c:194) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes_mixColumns' into 'aes256_encrypt_ecb' (aes.c:195) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 870760 ; free virtual = 998401
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ecb3' (aes.c:192:6) in function 'aes256_encrypt_ecb' : 
+WARNING: [XFORM 203-542] more than one sub loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 870749 ; free virtual = 998389
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes256_encrypt_ecb' ...
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P_BRAM' (aes.c:162) on 'rc', which is not an array.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P_BRAM' on 'rcon', which is not an array.
+WARNING: [SYN 201-107] Renaming port name 'aes256_encrypt_ecb/buf' to 'aes256_encrypt_ecb/buf_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'aes_expandEncKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.27 seconds; current allocated memory: 82.149 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 82.821 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'aes_addRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 82.926 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 83.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'aes256_encrypt_ecb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'mix'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b', aes.c:145->aes.c:195) on array 'buf_r' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 8, Depth: 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 84.033 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 84.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_expandEncKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes_expandEncKey_sbox' to 'aes_expandEncKey_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_expandEncKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 86.149 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes_addRoundKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes_addRoundKey'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 88.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes256_encrypt_ecb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes256_encrypt_ecb/ctx_key' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes256_encrypt_ecb/ctx_enckey' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes256_encrypt_ecb/ctx_deckey' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes256_encrypt_ecb/k' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes256_encrypt_ecb/buf_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes256_encrypt_ecb' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'sbox' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'aes256_encrypt_ecb_sbox' to 'aes256_encrypt_eccud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes256_encrypt_ecb'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 90.660 MB.
+INFO: [RTMG 210-279] Implementing memory 'aes_expandEncKey_bkb_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 870725 ; free virtual = 998372
+INFO: [SYSC 207-301] Generating SystemC RTL for aes256_encrypt_ecb.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes256_encrypt_ecb.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes256_encrypt_ecb.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_aes256_encrypt_ecb.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:39:53 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1202251497634793272040
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:39:54 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite_fresh/common/harness.c:6:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1202771497634794424304
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) local_support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:39:55 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1203291497634795396484
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:39:56 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite_fresh/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1203921497634796358768
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Success.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_aes256_encrypt_ecb_top -prj aes256_encrypt_ecb.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s aes256_encrypt_ecb 
+Multi-threading is on. Using 142 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes_expandEncKey_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_expandEncKey_bkb_rom
+INFO: [VRFC 10-311] analyzing module aes_expandEncKey_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/AESL_automem_ctx_enckey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_enckey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/AESL_automem_buf_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_buf_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/AESL_automem_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/AESL_automem_ctx_key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes_expandEncKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_expandEncKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes_addRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_addRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes256_encrypt_ecb.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_aes256_encrypt_ecb_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/AESL_automem_ctx_deckey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ctx_deckey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes256_encrypt_ecb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes256_encrypt_ecb
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.aes_expandEncKey_bkb_rom
+Compiling module xil_defaultlib.aes_expandEncKey_bkb(DataWidth=8...
+Compiling module xil_defaultlib.aes_expandEncKey
+Compiling module xil_defaultlib.aes_addRoundKey
+Compiling module xil_defaultlib.aes256_encrypt_ecb
+Compiling module xil_defaultlib.AESL_automem_ctx_key
+Compiling module xil_defaultlib.AESL_automem_ctx_enckey
+Compiling module xil_defaultlib.AESL_automem_ctx_deckey
+Compiling module xil_defaultlib.AESL_automem_k
+Compiling module xil_defaultlib.AESL_automem_buf_r
+Compiling module xil_defaultlib.apatb_aes256_encrypt_ecb_top
+Built simulation snapshot aes256_encrypt_ecb
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/xsim.dir/aes256_encrypt_ecb/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/xsim.dir/aes256_encrypt_ecb/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jun 16 10:40:00 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun 16 10:40:00 2017...
+
+****** xsim v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/aes256_encrypt_ecb/xsim_script.tcl
+# xsim {aes256_encrypt_ecb} -autoloadwcfg -tclbatch {aes256_encrypt_ecb.tcl}
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source aes256_encrypt_ecb.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [0.00%] @ "34475000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 34515 ns : File "/local/ssd/home/mattfel/machsuite_fresh/aes/aes/aes_syn/solution/sim/verilog/aes256_encrypt_ecb.autotb.v" Line 432
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jun 16 10:40:07 2017...
+INFO: [COSIM 212-316] Starting C post checking ...
+Success.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total elapsed time: 25.03 seconds; peak allocated memory: 90.660 MB.

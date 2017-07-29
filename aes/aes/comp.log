@@ -1,0 +1,21 @@
+Command: vcs apatb_aes256_encrypt_ecb_top -l comp.log +lint=PCWM -debug_pp -full64 \
+
+                         Chronologic VCS (TM)
+      Version K-2015.09-SP2-7_Full64 -- Thu Jun 15 18:04:50 2017
+               Copyright (c) 1991-2015 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Error-[SFCOR] Source file cannot be opened
+  Source file "apatb_aes256_encrypt_ecb_top" cannot be opened for reading due 
+  to 'No such file or directory'.
+  Please fix above issue and compile again.
+  
+  
+
+1 error
+CPU time: .147 seconds to compile

@@ -1,9 +1,12 @@
 open_project knn_syn
 
-add_files md.c
+	add_files -cflags -I../../common md.c
+	add_files -cflags -I../../common support.h
+	add_files -tb -cflags -I../../common ../../common/harness.c
+	add_files -tb -cflags -I../../common ../../common/support.c
+	add_files -tb -cflags -I../../common local_support.c
 add_files input.data
 add_files check.data
-add_files -tb ../../common/harness.c
 
 set_top md_kernel
 
@@ -13,6 +16,6 @@ create_clock -period 10
 #source ./knn_dir
 #config_rtl -reset all -reset_level low
 csynth_design
-cosim_design -rtl verilog -tool modelsim -trace_level all
+cosim_design -rtl verilog -tool xsim -trace_level all
 
 exit

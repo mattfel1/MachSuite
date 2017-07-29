@@ -19,6 +19,7 @@ void fft(double real[FFT_SIZE], double img[FFT_SIZE], double real_twid[FFT_SIZE/
             img[even] = temp;
 
             rootindex = (even<<log) & (FFT_SIZE - 1);
+            printf("messing with %d %d %d\n", odd, even, rootindex);
             if(rootindex){
                 temp = real_twid[rootindex] * real[odd] -
                     img_twid[rootindex]  * img[odd];

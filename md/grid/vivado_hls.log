@@ -1,0 +1,244 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:36:08 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/md/grid'
+INFO: [HLS 200-10] Opening project '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn'.
+INFO: [HLS 200-10] Adding design file 'md.c' to the project
+INFO: [HLS 200-10] Adding design file 'support.h' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'md.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 863004 ; free virtual = 998162
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 863003 ; free virtual = 998161
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 863001 ; free virtual = 998159
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.965 ; gain = 12.590 ; free physical = 863001 ; free virtual = 998159
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 862980 ; free virtual = 998137
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 862986 ; free virtual = 998144
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'md' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'md' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.8 seconds; current allocated memory: 61.461 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 62.658 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'md' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/n_points' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/force_x' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/force_y' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/force_z' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/position_x' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/position_y' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'md/position_z' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'md' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'md_dadddsub_64ns_64ns_64_4_full_dsp' to 'md_dadddsub_64ns_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'md_dmul_64ns_64ns_64_5_max_dsp' to 'md_dmul_64ns_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'md_ddiv_64ns_64ns_64_17' to 'md_ddiv_64ns_64nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'md_dcmp_64ns_64ns_1_1' to 'md_dcmp_64ns_64nseOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'md_dadddsub_64ns_bkb': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'md_dcmp_64ns_64nseOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'md_ddiv_64ns_64nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'md_dmul_64ns_64nscud': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'md'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 64.584 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 469.961 ; gain = 140.586 ; free physical = 862970 ; free virtual = 998132
+INFO: [SYSC 207-301] Generating SystemC RTL for md.
+INFO: [VHDL 208-304] Generating VHDL RTL for md.
+INFO: [VLOG 209-307] Generating Verilog RTL for md.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_md.cpp
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:36:17 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/harness.c:6:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1060271497839777643475
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) local_support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:36:18 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1060811497839778589742
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) md.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:36:19 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1061331497839779586206
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Sun Jun 18 19:36:20 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1061851497839780658574
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite/md/grid/grid_syn/solution/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ERROR: System recieved a signal named SIGSEGV and the program has to stop immediately!
+This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
+Possible cause of this problem may be: 1) the depth setting of pointer type argument is much larger than it needed; 2)insufficient depth of array argument; 3)null pointer etc.
+Current execution stopped during CodeState = DELETE_CHAR_BUFFERS.
+You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+command 'ap_source' returned error code
+    while executing
+"source hls.tcl"
+    invoked from within
+"hls::main hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+INFO: [HLS 200-112] Total elapsed time: 13.71 seconds; peak allocated memory: 64.584 MB.

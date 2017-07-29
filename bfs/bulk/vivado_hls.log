@@ -1,0 +1,374 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Fri Apr 14 19:19:38 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:46:16 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk'
+INFO: [HLS 200-10] Opening project '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn'.
+INFO: [HLS 200-10] Adding design file 'bfs.c' to the project
+WARNING: [HLS 200-40] Cannot find design file 'support.h'
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Adding design file 'input.data' to the project
+INFO: [HLS 200-10] Adding design file 'check.data' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/harness.c' to the project
+INFO: [HLS 200-10] Adding test bench file '../../common/support.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'local_support.c' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Skipped source file 'check.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'input.data'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Cannot find source file support.h; skipping it.
+INFO: [HLS 200-10] Analyzing design file 'bfs.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 870785 ; free virtual = 998433
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 870784 ; free virtual = 998432
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 870782 ; free virtual = 998430
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 341.961 ; gain = 12.590 ; free physical = 870782 ; free virtual = 998430
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 870764 ; free virtual = 998411
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 870771 ; free virtual = 998419
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bfs' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'bfs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 58.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 59.089 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bfs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/nodes_edge_begin' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/nodes_edge_end' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/edges_dst' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/starting_node' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/level' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bfs/level_counts' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bfs' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bfs'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 59.476 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 469.957 ; gain = 140.586 ; free physical = 870764 ; free virtual = 998413
+INFO: [SYSC 207-301] Generating SystemC RTL for bfs.
+INFO: [VHDL 208-304] Generating VHDL RTL for bfs.
+INFO: [VLOG 209-307] Generating Verilog RTL for bfs.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+make[1]: Entering directory `/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_bfs.cpp
+   Compiling (apcc) bfs.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:46:24 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1217031497635184978560
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) harness.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:46:25 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite_fresh/common/harness.c:6:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1217551497635185875434
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) local_support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:46:26 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1218071497635186843827
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) support.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'mattfel' on host 'london.stanford.edu' (Linux_x86_64 version 3.13.0-32-generic) on Fri Jun 16 10:46:27 PDT 2017
+INFO: [HLS 200-10] On os Ubuntu 14.04.5 LTS
+INFO: [HLS 200-10] In directory '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /local/ssd/home/mattfel/machsuite_fresh/common/support.c:10:
+/usr/include/x86_64-linux-gnu/sys/stat.h:210:65: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:214:79: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+                                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:264:66: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+                                                                 ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:285:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:292:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:297:77: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+                                                                            ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:312:71: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+                                                                      ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:322:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:337:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:351:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:372:96: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+                                                                                               ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:400:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:402:62: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                             ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:404:63: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+                                                              ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:407:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+                                   ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:443:54: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+                                                     ^
+/usr/include/x86_64-linux-gnu/sys/stat.h:447:36: warning: unknown attribute '__leaf__' ignored [-Wattributes]
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+                                   ^
+17 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_mattfel/1218591497635187844218
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/wrapc'
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Success.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_bfs_top -prj bfs.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s bfs -debug wave 
+Multi-threading is on. Using 142 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/AESL_automem_level.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_level
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/AESL_automem_nodes_edge_end.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_nodes_edge_end
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/AESL_automem_nodes_edge_begin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_nodes_edge_begin
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/bfs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/bfs.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_bfs_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/AESL_automem_edges_dst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_edges_dst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/AESL_automem_level_counts.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_level_counts
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.bfs
+Compiling module xil_defaultlib.AESL_automem_nodes_edge_begin
+Compiling module xil_defaultlib.AESL_automem_nodes_edge_end
+Compiling module xil_defaultlib.AESL_automem_edges_dst
+Compiling module xil_defaultlib.AESL_automem_level
+Compiling module xil_defaultlib.AESL_automem_level_counts
+Compiling module xil_defaultlib.apatb_bfs_top
+Built simulation snapshot bfs
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/xsim.dir/bfs/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/xsim.dir/bfs/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jun 16 10:46:31 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun 16 10:46:31 2017...
+
+****** xsim v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/bfs/xsim_script.tcl
+# xsim {bfs} -autoloadwcfg -tclbatch {bfs.tcl}
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source bfs.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set level_group [add_wave_group level(memory) -into $cinoutgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_q0 -into $level_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_d0 -into $level_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_we0 -into $level_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_ce0 -into $level_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_address0 -into $level_group -radix hex
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set level_counts_group [add_wave_group level_counts(memory) -into $coutputgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_counts_d0 -into $level_counts_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_counts_we0 -into $level_counts_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_counts_ce0 -into $level_counts_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/level_counts_address0 -into $level_counts_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set starting_node_group [add_wave_group starting_node(wire) -into $cinputgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/starting_node -into $starting_node_group -radix hex
+## set edges_group [add_wave_group edges(memory) -into $cinputgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/edges_dst_q0 -into $edges_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/edges_dst_ce0 -into $edges_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/edges_dst_address0 -into $edges_group -radix hex
+## set nodes_group [add_wave_group nodes(memory) -into $cinputgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_end_q0 -into $nodes_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_end_ce0 -into $nodes_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_end_address0 -into $nodes_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_begin_q0 -into $nodes_group -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_begin_ce0 -into $nodes_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/AESL_inst_bfs/nodes_edge_begin_address0 -into $nodes_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_start -into $blocksiggroup
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_done -into $blocksiggroup
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_idle -into $blocksiggroup
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_bfs_top/AESL_inst_bfs/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_bfs_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_bfs_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_bfs_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_nodes_edge_begin -into $tb_portdepth_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_nodes_edge_end -into $tb_portdepth_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_edges_dst -into $tb_portdepth_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_starting_node -into $tb_portdepth_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_level -into $tb_portdepth_group -radix hex
+## add_wave /apatb_bfs_top/LENGTH_level_counts -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_level_group [add_wave_group level(memory) -into $tbcinoutgroup]
+## add_wave /apatb_bfs_top/level_q0 -into $tb_level_group -radix hex
+## add_wave /apatb_bfs_top/level_d0 -into $tb_level_group -radix hex
+## add_wave /apatb_bfs_top/level_we0 -into $tb_level_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/level_ce0 -into $tb_level_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/level_address0 -into $tb_level_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_level_counts_group [add_wave_group level_counts(memory) -into $tbcoutputgroup]
+## add_wave /apatb_bfs_top/level_counts_d0 -into $tb_level_counts_group -radix hex
+## add_wave /apatb_bfs_top/level_counts_we0 -into $tb_level_counts_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/level_counts_ce0 -into $tb_level_counts_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/level_counts_address0 -into $tb_level_counts_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_starting_node_group [add_wave_group starting_node(wire) -into $tbcinputgroup]
+## add_wave /apatb_bfs_top/starting_node -into $tb_starting_node_group -radix hex
+## set tb_edges_group [add_wave_group edges(memory) -into $tbcinputgroup]
+## add_wave /apatb_bfs_top/edges_dst_q0 -into $tb_edges_group -radix hex
+## add_wave /apatb_bfs_top/edges_dst_ce0 -into $tb_edges_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/edges_dst_address0 -into $tb_edges_group -radix hex
+## set tb_nodes_group [add_wave_group nodes(memory) -into $tbcinputgroup]
+## add_wave /apatb_bfs_top/nodes_edge_end_q0 -into $tb_nodes_group -radix hex
+## add_wave /apatb_bfs_top/nodes_edge_end_ce0 -into $tb_nodes_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/nodes_edge_end_address0 -into $tb_nodes_group -radix hex
+## add_wave /apatb_bfs_top/nodes_edge_begin_q0 -into $tb_nodes_group -radix hex
+## add_wave /apatb_bfs_top/nodes_edge_begin_ce0 -into $tb_nodes_group -color #ffff00 -radix hex
+## add_wave /apatb_bfs_top/nodes_edge_begin_address0 -into $tb_nodes_group -radix hex
+## save_wave_config bfs.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "158485000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 158525 ns : File "/local/ssd/home/mattfel/machsuite_fresh/bfs/bulk/bfs_syn/solution/sim/verilog/bfs.autotb.v" Line 487
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jun 16 10:46:38 2017...
+INFO: [COSIM 212-316] Starting C post checking ...
+Success.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total elapsed time: 22.2 seconds; peak allocated memory: 59.476 MB.
